@@ -2,11 +2,10 @@ from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, START, END
 from pydantic import BaseModel, Field
 from typing import Literal, TypedDict, Annotated, List
-from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, SystemMessage
 import operator
 
-load_dotenv()
+
 
 class Demographic(BaseModel):
     name : str = Field(description = "Name of the individual")
